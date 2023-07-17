@@ -96,20 +96,11 @@ let view (ctx:HttpContext) (env:#_) (isDev) (body: int -> Task<string>) = task{
        
         <body>
             <header>
-                <img class=logo src = "/assets/icons/logo.svg" alt="Fun Pizza Shop"/>
-                    <a href="/" class='nav-tab { if isRoot then "active" else ""}'>
-                        <img src="/assets/icons/pizza-slice.svg" alt="Get Pizza" />
-                        <div>Get Pizza</div>
-                    </a>
-                    <a href="/myOrders" class='nav-tab { if isMyOrders then "active" else ""}'>
-                        <img src="/assets/icons/bike.svg" alt="My Orders" />
-                        <span>My Orders</span>
-                    </a>
-                    {signin}
+
             </header>
             <main>
                 {body}
             </main>
         </body>
     </html>"""
-    }
+}
